@@ -32,30 +32,27 @@ a:hover {
 	border-bottom: 1px solid #0e5771;
 	padding:0;
 	color:#eee;
-	font-size:14px;
-	line-height: 45px;
+	font-size:16px;
+/*	line-height: 45px;*/
 	text-align:center;
-	height: 45px;
+/*	height: 45px;*/
 }
 
 #header .menubtn {
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	height: 45px;
 	width: 50px;
-	border-radius: 3px;
 	text-align: center;
 	float: left;
 }
 
-#header .btn:active {
-    background-color:#0f6f91;
+#header .menubtn:active {
+    background-color:#A0CF67;
 }
 
 .logo{
-	height:32px; 
+	height:38px; 
 	width:auto; 
-	margin-top:6px
+	margin-top:4px;
 }
 /*Fin estilos de la cabecera*/
 
