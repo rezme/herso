@@ -1,9 +1,5 @@
-* {
-    -webkit-user-select: none;
-}
-
 body {
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-family:'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:14px;
     height:100%;
     width:100%;
@@ -19,42 +15,48 @@ a {
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+a:hover{
+    color: white;
+    text-decoration: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
 /*Inicio estilos de la cabecera*/
 #header {
-	position:absolute; z-index:2;
-	top:0; left:0;
-	width:100%;
-	background: #118eba;
-	border-bottom: 1px solid #0e5771;
-	padding:0;
-	color:#eee;
-	font-size:14px;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #82BC00;
+	padding: 0;
+	color: #eee;
+	font-size: 14px;
 	line-height: 45px;
-	text-align:center;
+	text-align: center;
 	height: 45px;
 }
 
-#header .btn {
+/*#header .btn {
     position: absolute;
-    top: 5px;
+    top: 6px;
     left: 5px;
-    width:17%;
-    line-height: 36px;
-    background-color:#46b7f1;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-}
-
-#header .btn:active {
+    width:10%;
+}*/
+.menutbtn{
+		height:45px;
+		width:50px;
+		float: left;
+	}
+	
+/*#header .btn:active {
     background-color:#0f6f91;
 }
-
+*/
 .logo{
-	height:32px; 
-	width:auto; 
-	margin-top:6px
+	height:40px; 
+	width:auto;
 }
 /*Fin estilos de la cabecera*/
 
@@ -68,18 +70,18 @@ a {
 
 #cuerpo h1{
 	font-size:20px;
-	line-height:30px
+	line-height:30px;
 }
 
 .borde-h1{
 	width:5px;
 	float:left;
 	height:30px;
-	margin-right:5px
+	margin-right:5px;
 }
 
 #contenidoCuerpo{
-	margin:10px
+	margin: 10px;
 }
 /*Final estilos del cuerpo*/
 
@@ -105,7 +107,7 @@ a {
 	float:left;
 	left:0px;
 	height:100%;
-	margin-right:10px
+	margin-right:10px;
 }
 
 .color1{
@@ -164,7 +166,7 @@ a {
 	border-top:1px solid #202529;
 	background-color:#181c1f;
 	height:88px;
-	color:#fff
+	color:#fff;
 }
 
 
@@ -190,33 +192,6 @@ a {
 	color:#6e7679;
 	font-size:12px;
 	text-shadow: 0 1px #000;
-	padding-bottom:25px
+	padding-bottom:25px;
 }
 /*Fin estilos de las capas internas de los iscroll, tanto cuerpo como menu*/
-
-/*Inicio c—digo de posici—n y transici—n de las p‡ginas*/
-.page {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
- 
-.page.center {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
-
-.page.right {
-    -webkit-transform: translate3d(80%, 0, 0);
-    transform: translate3d(80%, 0, 0);
-}
- 
-.page.transition {
-    -webkit-transition-duration: .25s;
-    transition-duration: .25s;
-}
-/*Fin c—digo de posici—n y transici—n de las p‡ginas*/
