@@ -13,12 +13,12 @@
 		function onDeviceReady() {
 			// Register the event listener
 			console.log("inicio");
-			document.addEventListener("backbutton", onBackKeyDown, false);
+			document.addEventListener("backbutton", BackKeyDown, false);
 		}
 	
 		// Handle the back button
 		//
-		function onBackKeyDown() {
+		function BackKeyDown() {
 			alert("precionasteBackbtn");
 			e.preventDefault();
 		}
