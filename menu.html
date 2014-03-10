@@ -10,18 +10,24 @@
 <link rel="stylesheet" type="text/css" href="css/index.css"/>
 
 <script type="text/javascript">
-		function onDeviceReady() {
-			// Register the event listener
-			console.log("inicio");
-			document.addEventListener("backbutton", onBackKeyDown, false);
+		document.addEventListener("deviceready", onDeviceReady, false);
+			function onDeviceReady() {
+				document.addEventListener("backbutton", function (e) {
+					e.preventDefault();
+				}, false );
 		}
-	
-		// Handle the back button
-		//
-		function onBackKeyDown() {
-			alert("precionaste Backbtn");
-			e.preventDefault();
-		}
+//		function onDeviceReady() {
+//			// Register the event listener
+//			console.log("inicio");
+//			document.addEventListener("backbutton", onBackKeyDown, false);
+//		}
+//	
+//		// Handle the back button
+//		//
+//		function onBackKeyDown() {
+//			alert("precionaste Backbtn");
+//			e.preventDefault();
+//		}
 </script>
 
 <style type="text/css">
