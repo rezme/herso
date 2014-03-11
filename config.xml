@@ -3,7 +3,7 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id        = ""
 		versionCode=""
-		version   = "0.16">
+		version   = "0.20">
 		<name>HersoApp</name>
 		<description>
 Iniciando la App		</description>
