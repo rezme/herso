@@ -39,29 +39,31 @@
   </style>
 </head>
 <body>
-<div data-role="page" id="page">
-	<div class="container-fluid text-center">
-        <div style="display:block;"><img src="img/logprin.png" class="portada" alt="logo"></div>
-        <div class="desktopbtnS"><a href="#mod" data-toggle="modal"><img src="img/SisBtn.png" alt="sistemas"></a></div>
-      	<div class="desktopbtnP"><img src="img/HerPry.png" alt="proyectos"></div>
-        <div class="span12">
-			<div id="mod" class="modal hide fade text-left">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h2>Sistemas</h2>
-				</div>
-				<div class="modal-footer text-left">
-					<form name="login" action="javascript:check(this.form);">
+<div class="container-fluid text-center">
+	<div class="row-fluid">
+        <div class="span4"></div>
+        <div class="span4">
+            <div style="display:block;"><img src="img/logprin.png" class="portada" alt="logo"></div>
+            <div class="desktopbtnS"><a href="#mod" data-toggle="modal"><img src="img/SisBtn.png" alt="sistemas"></a></div>
+            <div class="desktopbtnP"><img src="img/HerPry.png" alt="proyectos"></div>   
+            <div id="mod" class="modal hide fade text-left">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2>Sistemas</h2>
+                </div>
+                <div class="modal-footer text-left">
+                    <form name="login" action="javascript:check(this.form);">
                     <div class="input-prepend">
                         <span class="add-on">Password</span>
                         <input type="password" name="pass"/>                                                    
-					</div>
-                    	<input type="submit" class="btn btn-success" name="login" value="Aceptar"/>
+                    </div>
+                        <input type="submit" class="btn btn-success" name="login" value="Aceptar"/>
                     </form>
-				</div>
-			</div>
-		</div>
-   	</div>
+                </div>
+            </div>
+        </div>
+        <div class="span4"></div>
+	</div>
 </div>
 
 <!--<div data-role="page" id="page2">
