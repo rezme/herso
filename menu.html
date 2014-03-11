@@ -17,10 +17,14 @@
 //		}
     function onDeviceReady() {
 		console.log("inicio");
+		document.addEventListener("menubutton", onMenuKeyDown, false);
         document.addEventListener("backbutton", function (e) {
             e.preventDefault();
         }, false );
 }
+	function onMenuKeyDown(){
+		alert("menu");
+		}
 //	
 //		// Handle the back button
 //		//
