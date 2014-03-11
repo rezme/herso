@@ -8,24 +8,17 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link href="font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="css/index.css"/>
-<!--<script type="text/javascript" src="phonegap.js"></script>-->
+<script type="text/javascript" src="phonegap.js"></script>
 <script type="text/javascript">
-//		function onDeviceReady() {
-//			// Register the event listener
-//			console.log("inicio");
-//			document.addEventListener("backbutton", onBackKeyDown, false);
-//		}
 	function onLoad(){
 		console.log('loaded');
-		document.addEventListener("deviceready",onDeviceReady,false);	
-	}
-    function onDeviceReady() {
+		alert('Alerta!');
 		console.log("inicio");
 		document.addEventListener("menubutton", onMenuKeyDown, false);
         document.addEventListener("backbutton", function (e) {
             e.preventDefault();
-        }, false );
-}
+        }, false );	
+	}
 	function onMenuKeyDown(){
 	    navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
 	    destinationType: Camera.DestinationType.FILE_URI }); 
