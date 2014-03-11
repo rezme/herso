@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link href="font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="css/index.css"/>
-<script type="text/javascript" src="phonegap.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript">
 	function onLoad(){
 		console.log('loaded');
@@ -20,7 +20,7 @@
         }, false );	
 	}
 	function onMenuKeyDown(){
-		alert(':S?');
+		menu('menu');
 	}
 //	
 //		// Handle the back button
@@ -57,7 +57,7 @@
 <div id="cuerpo">
    	<div id="header">
          <a href="javascript:menu('menu');" class="menubtn">
-           	<i class="fa fa-bars fa-2x" style="margin-top:7px; color: #000; opacity:.9;"></i>
+           	<i class="fa fa-bars fa-2x" style="margin-top:7px; color: #000; opacity:.3;"></i>
          </a>
          <img class="logo" src="img/logohersomini.png" alt="logo" />
     </div>
