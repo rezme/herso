@@ -40,7 +40,9 @@
         <div class="span10">
             <div style="display:block;"><img src="img/logprin.png" class="portada" alt="logo"></div>
             <div class="desktopbtnS"><a href="#mod" data-toggle="modal"><img src="img/SisBtn.png" alt="sistemas"></a></div>
-            <div class="desktopbtnP"><img src="img/HerPry.png" alt="proyectos"></div>   
+            <div class="desktopbtnP"><a href="#" id="mipop"><img src="img/HerPry.png" alt="proyectos"></a></div>  
+            <div class="row-fluid"> 
+            <div class="span3">
             <div id="mod" class="modal hide fade text-left">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -55,6 +57,8 @@
                         <input type="submit" class="btn btn-success" name="login" value="Aceptar"/>
                     </form>
                 </div>
+            </div>
+            </div>
             </div>
         </div>
         <div class="span1"></div>
@@ -130,7 +134,14 @@
 			 {
 			   alert("Error de autenticación")/*displays error message*/
 			  }
-			};			
+			};
+			$("#mipop").popover({
+				placement: "top",
+				title: "Esto es un titulo",
+				content: "Lorem <a href='#' class='btn btn-primary'>Link de cosas</a>Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500",
+				html: true,
+				trigger: 'click',
+			});			
 		</script>
 </body>
 </html>
