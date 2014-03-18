@@ -7,13 +7,12 @@
 			db.transaction(populateDB, errorCB, successCB);
 			console.log("inicio");
 			}
-			function populateDB(tx, val1, val2) {
-//			tx.executeSql('DROP TABLE IF EXISTS DEMO');
-			tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-//			tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-//			tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
-//			tx.executeSql('INSERT INTO DEMO (id, data) VALUES (3, "Third row")');
-			tx.executeSql('INSERT INTO DEMO (id, data) VALUES ("id: formulario.id.value, data: formulario.data.value")');
+			function populateDB(tx) {
+			tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, data)');
+//			tx.executeSql('INSERT INTO DEMO (data) VALUES ("First row")');
+//			tx.executeSql('INSERT INTO DEMO (data) VALUES ("Second row")');
+//			tx.executeSql('INSERT INTO DEMO (data) VALUES ("Third row")');
+			tx.executeSql('INSERT INTO DEMO (data) VALUES ("tercera")');
 			}
 		
 			// Transaction error callback

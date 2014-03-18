@@ -38,6 +38,13 @@ var app = {
 		
 		// Creamos los 2 scroll mediante el plugin iscroll, uno para el menu principal y otro para el cuerpo
 		myScroll = new iScroll('wrapper', { hideScrollbar: true });
+	    myScroll.options.onBeforeScrollStart = function(e) {                
+        var target = e.target;
+        while (target.nodeType != 1) target = target.parentNode;
+        if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA'){
+            e.preventDefault();
+        }
+   }
 		myScrollMenu = new iScroll('wrapperMenu', { hideScrollbar: true });
 	
         this.bindEvents();
@@ -124,11 +131,6 @@ function menu(opcion){
 		console.log("inicio");
 		}
 		 function populateDB(tx) {
-		tx.executeSql('DROP TABLE IF EXISTS DEMO');
-		tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-		tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-		tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
-		tx.executeSql('INSERT INTO DEMO (id, data) VALUES (3, "Third row")');
 		}
 	
 		// Transaction error callback
