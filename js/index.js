@@ -100,7 +100,7 @@ function menu(opcion){
 		
 		// Recogemos mediante ajax el contenido del html segœn la opci—n clickeada en el menu
 		xhReq.open("GET", "opciones/opcion"+opcion+".html", false);
-		//xhReq.open("POST", "js/bd.js", false);
+//		xhReq.open("HEAD","bd.js",false);
 		xhReq.send(null);
 		document.getElementById("contenidoCuerpo").innerHTML=xhReq.responseText;
 		
@@ -121,40 +121,4 @@ function menu(opcion){
     		cuerpo.className = 'page transition center';
 			estado="cuerpo";	
 		};
-		document.getElementById("consulta").onclick = function() {
-		//disable
-		this.innerHTML = "Hecho";
-		this.disabled = true;
-		//do some validation stuff
-		var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-		db.transaction(populateDB, errorCB, successCB);
-		console.log("inicio");
-		}
-		 function populateDB(tx) {
-		}
-	
-		// Transaction error callback
-		//
-		function errorCB(err) {
-			alert("Error processing SQL: "+err);
-		}
-	
-		// Transaction success callback
-		//
-		function successCB() {
-	//		alert("success!");
-			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-			db.transaction(queryDB,errorCB);
-			console.log('exito');
-		}
-		function queryDB(tx) {
-			tx.executeSql('SELECT * FROM DEMO', [], consulta, errorCB);
-		}
-		function consulta(tx, resultado){
-			var len = resultado.rows.length;
-			var element = document.getElementById('consultado');
-			for (var i=0; i<len; i++){
-				element.innerHTML = element.innerHTML + 'Resultado: ' + resultado.rows.item(i).id + " DATA = " + resultado.rows.item(i).data+"</br>";
-			}
-		}
 }
