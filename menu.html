@@ -11,16 +11,22 @@
 <script type="text/javascript" src="phonegap.js"></script>
 <script type="text/javascript">
 	function onLoad(){
-		document.addEventListener("menubutton", onMenuKeyDown, false);	
+		document.addEventListener("menubutton", onMenuKeyDown, false);
         document.addEventListener("backbutton", function (e) {
             e.preventDefault();
-        }, false );	
+        }, false );
 	}
 	function onMenuKeyDown(){
 		menu('menu');
 	}
 </script>
 <style type="text/css">
+img[usemap] {
+		border: none;
+		height: auto;
+		max-width: 100%;
+		width: auto;
+	}
   /* escritorio iOS5 */
   @media(min-width: 1100px){
   }
@@ -52,10 +58,17 @@
     </div>
 	<div id="wrapper">
 		<div class="scroller">
-			<div id="contenidoCuerpo"></div>
+			<div id="contenidoCuerpo">
+			</div>
 		</div>
 	</div>
 </div>
+<map id="imgmap" name="imgmap">
+  <area shape="rect" alt="" title="" coords="153,169,168,188" href="#" target="" />
+  <area shape="rect" alt="" title="" coords="176,167,195,180" href="#" target="" />
+  <area shape="rect" alt="" title="" coords="340,124,357,140" href="#" target="" />
+  <area shape="rect" alt="" title="" coords="341,149,358,163" href="#" target="" />
+</map>
         <script type="text/javascript" src="js/fastclick.js"></script>
         <script type="text/javascript" src="js/iscroll.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
@@ -64,7 +77,13 @@
 		</script>
         <script type="text/javascript" src="js/bd.js"></script>
         <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
-		<!--<script src="js/jquery.mobile-1.4.0.min.js" type="text/javascript"></script>
-        <script src="js/bootstrap.js"></script>-->
+        <script src="js/jquery.rwdImageMaps.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        $(document).ready(function(e) {
+			$('img[usemap]').rwdImageMaps();
+		});
+        </script>
+		<script src="js/jquery.mobile-1.4.0.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.js"></script>
 </body>
 </html>

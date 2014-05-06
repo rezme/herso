@@ -28,6 +28,7 @@ var app = {
 			
 		// Leemos por ajax el archivos opcion1.html de la carpeta opciones
 		xhReq.open("GET", "opciones/opcion1.html", false);
+		//xhReq.open("HEAD","../img/mapaubica.PNG",false);
 		xhReq.send(null);
 		document.getElementById("contenidoCuerpo").innerHTML=xhReq.responseText;
 
@@ -97,13 +98,21 @@ function menu(opcion){
 		
 		// A–adimos la clase al li presionado
 		addClass('li-menu-activo' , document.getElementById("ulMenu").getElementsByTagName("li")[opcion]);
-		
 		// Recogemos mediante ajax el contenido del html segœn la opci—n clickeada en el menu
 		xhReq.open("GET", "opciones/opcion"+opcion+".html", false);
+		switch(opcion) {
+		case 1:
+			console.log("hola");
+			break;
+		case 2:
+			console.log("hola");
+			break;
+		}
 //		xhReq.open("HEAD","bd.js",false);
 		xhReq.send(null);
 		document.getElementById("contenidoCuerpo").innerHTML=xhReq.responseText;
 		
+
 		// Refrescamos el elemento iscroll segœn el contenido ya a–adido mediante ajax, y hacemos que se desplace al top
 		myScroll.refresh();
 		myScroll.scrollTo(0,0);
