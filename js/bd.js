@@ -169,7 +169,6 @@
 				document.getElementById('mostrarimagen').innerHTML = "<img id='mapapa' src='img/"+ num +".PNG' alt='piso3' width='575' height='358' usemap='#imgmap'>";
 				console.log("refrescadO!");
 				$('area').on('click', function(e) {
-				e.preventDefault();
 				alert($(this).attr('alt') + ' clickeado');	
 			});
 			}
