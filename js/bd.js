@@ -160,10 +160,9 @@
 				}
 			}
 			function verniveles(){
-				document.getElementById('mostrarimagen').innerHTML = "(<a href='javascript:void(0);' onclick='vernivel(1); refrescaragenda();'> Nivel 1</a>)</br>"+
-																		"(<a href='javascript:void(0);' onclick='vernivel(2); refrescaragenda();'> Nivel 2</a>)</br>"+
-																		"(<a href='javascript:void(0);' onclick='vernivel(3); refrescaragenda();'> Nivel 3</a>)</br>";
-				console.log("refrescadO!");
+				document.getElementById('mostrarimagen').innerHTML = "(<a href='javascript:void(0);' onclick='vernivel(1);'> Nivel 1</a>)</br>"+
+																		"(<a href='javascript:void(0);' onclick='vernivel(2);'> Nivel 2</a>)</br>"+
+																		"(<a href='javascript:void(0);' onclick='vernivel(3);'> Nivel 3</a>)</br>";
 			}
 			function vernivel(num){
 				document.getElementById('mostrarimagen').innerHTML = "<img id='mapapa' src='img/"+ num +".PNG' alt='piso3' width='575' height='358' usemap='#imgmap'>";
@@ -171,5 +170,9 @@
 				$('area').on('click', function(e) {
 				alert($(this).attr('alt') + ' clickeado');	
 			});
+			}
+			function refrescarmapa(){
+				document.getElementById('mostrarimagen').innerHTML = "";
+				console.log("refrescadO!");
 			}
 // JavaScript Document
