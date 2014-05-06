@@ -1,14 +1,10 @@
 <div class="borde-h1 color4"></div><h1>Selecciona un nivel</h1>
-<img id="mapapa" src="img/mapaubica.PNG" alt="piso3" width="575" height="358" usemap="#imgmap">
-<map id="imgmap" name="imgmap">
-  <area shape="rect" alt="" title="" coords="153,169,168,188" href="#" target="" />
-  <area shape="rect" alt="" title="" coords="176,167,195,180" href="#" target="" />
-  <area shape="rect" alt="" title="" coords="340,124,357,140" href="#" target="" />
-  <area shape="rect" alt="" title="" coords="341,149,358,163" href="#" target="" />
+<input type="submit" onClick="verniveles();" value="Ver niveles"><br>
+<div id="mostrarimagen"></div>
+<!--<img id="mapapa" src="img/mapaubica.PNG" alt="piso3" width="575" height="358" usemap="#imgmap">
+--><map id="imgmap" name="imgmap">
+  <area shape="rect" coords="153,169,168,188" href="#" title="0" alt="0" />
+  <area shape="rect" coords="176,167,195,180" href="#" title="1" alt="1" />
+  <area shape="rect" coords="340,124,357,140" href="#" title="2" alt="2" />
+  <area shape="rect" coords="341,149,358,163" href="#" title="3" alt="3" />
 </map>
-<script type="text/javascript">
-			$('#mapapa').click(function(){
-				alert( "Handler for .click() called." );
-				});
-			$('img[usemap]').rwdImageMaps();
-</script>

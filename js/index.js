@@ -99,14 +99,14 @@ function menu(opcion){
 		addClass('li-menu-activo' , document.getElementById("ulMenu").getElementsByTagName("li")[opcion]);
 		// Recogemos mediante ajax el contenido del html segœn la opci—n clickeada en el menu
 		xhReq.open("GET", "opciones/opcion"+opcion+".html", false);
-		switch(opcion) {
-		case 1:
-			console.log("hola");
-			break;
-		case 2:
-			console.log("hola");
-			break;
-		}
+//		switch(opcion) {
+//		case 1:
+//			console.log("hola");
+//			break;
+//		case 2:
+//			console.log("hola");
+//			break;
+//		}
 //		xhReq.open("HEAD","bd.js",false);
 		xhReq.send(null);
 		document.getElementById("contenidoCuerpo").innerHTML=xhReq.responseText;
@@ -129,4 +129,7 @@ function menu(opcion){
     		cuerpo.className = 'page transition center';
 			estado="cuerpo";	
 		};
+		'area'.onclick = function() {
+			alert('alerta');
+		}
 }
