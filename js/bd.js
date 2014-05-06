@@ -167,14 +167,10 @@
 			}
 			function vernivel(num){
 				document.getElementById('mostrarimagen').innerHTML = "<img id='mapapa' src='img/"+ num +".PNG' alt='piso3' width='575' height='358' usemap='#imgmap'>";
-				alert("Da click sobre las computadoras para saber su información");
+				alert("Haz click sobre las computadoras para saber su información");
 				$('img[usemap]').rwdImageMaps();
 				$('area').on('click', function(e) {
 				alert($(this).attr('alt') + ' clickeado');	
 			});
-			}
-			function refrescarmapa(){
-				document.getElementById('mostrarimagen').innerHTML = "";
-				console.log("refrescadO!");
 			}
 // JavaScript Document
