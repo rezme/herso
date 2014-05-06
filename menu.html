@@ -63,6 +63,12 @@ img[usemap] {
 		</div>
 	</div>
 </div>
+<map id="imgmap" name="imgmap">
+  <area shape="rect" coords="153,169,168,188" href="#" title="0" alt="0" />
+  <area shape="rect" coords="176,167,195,180" href="#" title="1" alt="1" />
+  <area shape="rect" coords="340,124,357,140" href="#" title="2" alt="2" />
+  <area shape="rect" coords="341,149,358,163" href="#" title="3" alt="3" />
+</map>
 </body>
         <script type="text/javascript" src="js/fastclick.js"></script>
         <script type="text/javascript" src="js/iscroll.js"></script>
@@ -79,6 +85,9 @@ img[usemap] {
 		});
 		$(document).click(function(){
 			$('img[usemap]').rwdImageMaps();
+						$('area').on('click', function(e) {
+				alert($(this).attr('alt') + ' clickeado');	
+			});
 		});
         </script>
         <script src="js/bootstrap.js"></script>
