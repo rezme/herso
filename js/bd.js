@@ -159,4 +159,18 @@
 																		+ " comentarios = " + resultado.rows.item(i).comentarios+"</br>";
 				}
 			}
+			function verniveles(){
+				document.getElementById('mostrarimagen').innerHTML = "(<a href='javascript:void(0);' onclick='vernivel(1); refrescaragenda();'> Nivel 1</a>)</br>"+
+																		"(<a href='javascript:void(0);' onclick='vernivel(2); refrescaragenda();'> Nivel 2</a>)</br>"+
+																		"(<a href='javascript:void(0);' onclick='vernivel(3); refrescaragenda();'> Nivel 3</a>)</br>";
+				console.log("refrescadO!");
+			}
+			function vernivel(num){
+				document.getElementById('mostrarimagen').innerHTML = "<img id='mapapa' src='img/"+ num +".PNG' alt='piso3' width='575' height='358' usemap='#imgmap'>";
+				console.log("refrescadO!");
+				$('area').on('click', function(e) {
+				e.preventDefault();
+				alert($(this).attr('alt') + ' clickeado');	
+			});
+			}
 // JavaScript Document
