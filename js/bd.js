@@ -167,8 +167,8 @@
 			}
 			function vernivel(num){
 				document.getElementById('mostrarimagen').innerHTML = "<img id='mapapa' src='img/"+ num +".PNG' alt='piso3' width='575' height='358' usemap='#imgmap'>";
-				console.log("refrescadO!");
 				alert("Da click sobre las computadoras para saber su información");
+				$('img[usemap]').rwdImageMaps();
 				$('area').on('click', function(e) {
 				alert($(this).attr('alt') + ' clickeado');	
 			});
