@@ -12,6 +12,7 @@
 				var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
 				db.transaction(populateDB);
 				console.log("inicio guardar");
+				document.getElementById("guardar").innerHTML = "Hecho";
 			}
 			function populateDB(tx) { 
 			//tx.executeSql('DROP TABLE registro');	
@@ -170,7 +171,68 @@
 				alert("Haz click sobre las computadoras para saber su información");
 				$('img[usemap]').rwdImageMaps();
 				$('area').on('click', function(e) {
-				alert($(this).attr('alt') + ' clickeado');	
+				alert($(this).attr('alt') + ' Seleccionado');	
 			});
+			}
+			
+			/////////////////////////////////////////////////////////// DIRECTORIO ////////////////////////////
+			function creardirect(){
+				var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+				db.transaction(populateDBdirect);
+				console.log("inicio guardar");
+			}
+			function populateDBdirect(tx) { 
+			tx.executeSql('CREATE TABLE IF NOT EXISTS directorio (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nombre, lugar, extension)');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Arturo Mejia Galvan", "Corporativo", "1105")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Adriana Soto", "Corporativo", "1102")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Jessica Martínez", "Corporativo", "278")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Diana Sánchez", "Corporativo", "1203")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Jorge Paz", "La piedad", "1304")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Karina Pérez", "La piedad", "235")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Victor Lepe", "Montevento", "1403")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Jose Juan Diaz", "Boulevard", "183")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Pedro Alvarez", "La piedad", "1874")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Edgar Mendoza", "Corporativo", "1931")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Consuelo Sanchez", "Corporativo", "1092")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Martin Garcia", "Corporativo", "4344")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Hugo Herrera", "Acacias", "1246")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Sonia Lopez", "Boulevard", "1024")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Juan Altamirano", "Boulevard", "1843")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Rodrigo Soto", "Corporativo", "311")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Monica Duran", "Acacias", "852")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Guillermina Romero", "Corporativo", "244")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Mayra Gomez", "Siervo", "8422")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Miguel Canela", "Corporativo", "124")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Adrian Solorzano", "Acacias", "234")');
+			tx.executeSql('INSERT INTO directorio (nombre,lugar,extension) VALUES ("Ximena Arteaga", "Corporativo", "1105")');
+			console.log("directorio creado");
+			}
+			// Transaction error callback
+			//
+			function errorCB(err) {
+				alert("Error processing SQL :CCC: "+err+"dota");
+			}
+		
+			// Transaction success callback
+			//
+			function successCBconsultardirec() {
+		//		alert("success!");
+				var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+				db.transaction(queryDBdirect,errorCB);
+				console.log('exito');
+			}
+			function queryDBdirect(tx) {
+				tx.executeSql('SELECT * FROM directorio', [], consultadirectorio, errorCB);
+			}
+			function consultadirectorio(tx, resultado){
+				var len = resultado.rows.length;
+				var element = document.getElementById('consultado');
+				for (var i=0; i<len; i++){
+					element.innerHTML = element.innerHTML + "<tr><td>" + resultado.rows.item(i).nombre+"</td><td>" + resultado.rows.item(i).lugar+"</td><td>"+resultado.rows.item(i).extension+"</td><tr>";
+				}
+			}
+			function botonlistodirect(){
+			//disable
+			document.getElementById("borrar").hidden = true;
 			}
 // JavaScript Document

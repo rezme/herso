@@ -1,0 +1,11 @@
+<div class="borde-h1 color3"></div><h1>Agenda</h1>
+<form id="formulario" name="formulario">
+<input class="input-medium" placeholder="Nombre" id="nombrea" type="text" name="data" value=""><br>
+<input class="input-large" placeholder="Hora" id="horarioa" type="datetime-local" name="nombre" value=""><br>
+<textarea id="descripciona" type="text" name="descripcion" value=""></textarea><br>
+<input class="input-medium" placeholder="Comentarios" id="comentariosa" type="text" name="comentarios" value=""><br>
+<input type="button" value="Guardar" onClick="guardaragenda();">
+</form>
+<button id="consultar" onClick="consultaListaagenda(); refrescaragenda();">Consultar</button>
+<div id="consultado"></div>
+<div id="consultadolistaagenda"></div>
